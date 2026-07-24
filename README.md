@@ -32,4 +32,8 @@ Al tratarse de un proyecto vivo, las siguientes fases de desarrollo incluyen:
 
 ## 📸 Capturas de Pantalla
 
-*(Nota: Añade aquí 3 o 4 imágenes de las que me has pasado, por ejemplo: la pantalla de login, la lista de plataformas y el mosaico de películas).*
+<img width="232" height="512" alt="Login" src="https://github.com/user-attachments/assets/3f350169-f4d5-4b24-961b-4568b68821ef" />
+<img width="241" height="512" alt="Lista de Plataformas" src="https://github.com/user-attachments/assets/b6189e70-abe0-4cf3-816f-ed0728b18f12" />
+<img width="245" height="512" alt="Peliculas" src="https://github.com/user-attachments/assets/a1fce124-21ed-406c-a0e6-bee4d875878a" />
+<img width="221" height="512" alt="Detalle Pelicula" src="https://github.com/user-attachments/assets/1aceb517-38a1-4215-ba7d-a8a73ff62629" />
+
