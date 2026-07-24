@@ -32,9 +32,11 @@ Al tratarse de un proyecto vivo, las siguientes fases de desarrollo incluyen:
 
 ## 📸 Capturas de Pantalla
 
-<img width="232" height="512" alt="Login" src="https://github.com/user-attachments/assets/3f350169-f4d5-4b24-961b-4568b68821ef" />
-<img width="241" height="512" alt="Lista de Plataformas" src="https://github.com/user-attachments/assets/b6189e70-abe0-4cf3-816f-ed0728b18f12" />
-<img width="245" height="512" alt="Peliculas" src="https://github.com/user-attachments/assets/a1fce124-21ed-406c-a0e6-bee4d875878a" />
-<img width="413" height="863" alt="Detalle Pelicula" src="https://github.com/user-attachments/assets/930906fb-6699-4346-b18f-8be9c249f2d3" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3f350169-f4d5-4b24-961b-4568b68821ef" alt="Login" height="350" />
+  <img src="https://github.com/user-attachments/assets/b6189e70-abe0-4cf3-816f-ed0728b18f12" alt="Plataformas" height="350" />
+  <img src="https://github.com/user-attachments/assets/a1fce124-21ed-406c-a0e6-bee4d875878a" alt="Catálogo" height="350" />
+  <img src="https://github.com/user-attachments/assets/930906fb-6699-4346-b18f-8be9c249f2d3" alt="Detalle" height="350" />
+</p>
 
 
