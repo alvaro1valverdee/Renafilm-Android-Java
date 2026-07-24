@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name" translatable="false">Renafilm</string>
+    <string name="btnGuardarPractica">Guardar en SharedPreferences</string>
+    <string name="btnCargarPractica">Cargar de SharedPreferences</string>
+    <string name="tvResultadoPractica">Aquí aparecerá lo cargado</string>
+    <string name="etDatoPractica">Escribe algo para guardar</string>
+    <string name="tituloApp4" translatable="false">Renafilm</string>
+    <string name="descripcionApp4">App para tener un catalogo de peliculas y sus puntuaciones</string>
+    <string name="btnStartApp4">Empezar</string>
+    <string name="tituloLogin" translatable="false">Login</string>
+    <string name="usuarioLogin">Usuario</string>
+    <string name="passwordLogin">Contraseña</string>
+    <string name="btnLogin">Iniciar Sesion</string>
+    <string name="registroLogin">Registrar</string>
+    <string name="nuevoUsuarioTitulo">Nuevo Usuario</string>
+    <string name="nuevoUsuario">Usuario</string>
+    <string name="nuevoUsuarioEmail">Correo electronico</string>
+    <string name="nuevoUsuarioTlf">Numero de telefono</string>
+    <string name="nuevoUsuarioPassword">Contraseña</string>
+    <string name="nuevoUsuarioPasswordRepetida">Repetir contraseña</string>
+    <string name="menu_rv_ayuda">Ayuda</string>
+    <string name="menu_rv_acerca_de">Acerca de</string>
+    <string name="menu_rv_cerrar_sesion">Cerrar sesión</string>
+    <string name="nombreAcercaDe" translatable="false">Alvaro Valverde Sánchez</string>
+    <string name="asignaturaAcercaDe">Programación Multimedia y Dispositivos Móviles</string>
+    <string name="cursoAcercaDe" translatable="false">2025-2026</string>
+    <string name="btnAcercaDe">Atras</string>
+    <string name="texto_ayuda_largo"><b>GUÍA DE AYUDA Y SOPORTE TÉCNICO - STREAMIFY</b>\n\n
+        Bienvenido a la sección de asistencia al usuario de Streamify (Renafilm). Esta aplicación ha sido diseñada como parte del módulo práctico de Programación Multimedia y Dispositivos Móviles (PMDM) para ofrecer una experiencia fluida en la gestión y consulta de catálogos de plataformas de streaming de vídeo bajo demanda.\n\n
+
+        <b>1. NAVEGACIÓN PRINCIPAL</b>\n
+        • <b>Pantalla de Inicio (Login):</b> Para acceder al catálogo, debe introducir sus credenciales. Si es la primera vez que inicia la aplicación, el sistema cuenta con un usuario maestro preconfigurado (admin / 1234). También puede acceder a la pantalla de registro para dar de alta nuevas credenciales locales.\n
+        • <b>Listado de Plataformas:</b> Una vez logueado, visualizará un RecyclerView con las principales plataformas del mercado (Netflix, HBO Max, Disney+, Amazon Prime, DAZN). Al pulsar sobre cualquiera de ellas, la aplicación filtrará automáticamente el contenido.\n
+        • <b>Mosaico de Películas (Grid):</b> Dentro de cada plataforma, las películas y series se muestran en una cuadrícula de 3 columnas con sus respectivas carátulas, títulos y valoraciones de usuarios.\n\n
+
+        <b>2. PREGUNTAS FRECUENTES (FAQ)</b>\n
+        • <b>¿Por qué no se guardan mis datos de acceso?</b>\n
+        La aplicación utiliza el sistema de persistencia SharedPreferences. Al pulsar el botón "Cerrar Sesión", el interruptor de estado se apaga, pero sus datos de registro permanecen a salvo en la memoria del dispositivo para la precarga automática.\n
+        • <b>¿Qué significan las estrellas debajo de los títulos?</b>\n
+        Representan la puntuación media otorgada por la crítica cinematográfica. El sistema soporta valoraciones con decimales (por ejemplo, 4.5 estrellas), representadas mediante componentes RatingBar nativos en formato miniatura.\n
+        • <b>¿La aplicación requiere conexión a Internet?</b>\n
+        Para las funciones locales de los bloques 3 y 4 (Base de datos SQLite y Listas), la aplicación funciona completamente offline. Sin embargo, para los módulos del bloque 5 que hacen uso de la librería Retrofit, es imprescindible disponer de una conexión de red activa para descargar los JSON externos.\n\n
+
+        <b>3. RESOLUCIÓN DE PROBLEMAS (TROUBLESHOOTING)</b>\n
+        • <b>Error: La aplicación se cierra al pulsar una plataforma</b>\n
+        Este fallo suele estar relacionado con una excepción de puntero nulo (NullPointerException) en el adaptador del RecyclerView. Verifique que los identificadores de los componentes gráficos del archivo XML coinciden exactamente con las llamadas del ViewHolder en el código Java.\n
+        • <b>Error: Los elementos se solapan con la barra superior</b>\n
+        Asegúrese de que el contenedor de la lista tiene aplicada la restricción adecuada respecto a la Toolbar: app:layout_constraintTop_toBottomOf=\"@id/toolbar\".\n\n
+
+        <b>4. TÉRMINOS DE USO Y PRIVACIDAD</b>\n
+        Esta aplicación tiene un propósito estrictamente educativo y de evaluación académica para el ciclo formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM). No comercializa, distribuye ni almacena datos personales en servidores externos sin el consentimiento explícito del usuario. Todos los logotipos y marcas mostrados pertenecen a sus respectivos propietarios legales.
+    </string>
+
+    <string name="tituloLoginTema5">Agenda de contactos</string>
+    <string name="cbLogin">Recordar</string>
+    <string name="menu_rv_contactos_exportar">Exportar a fichero</string>
+    <string name="menu_rv_contactos_eliminar_todos_contactos">Eliminar todos los contactos</string>
+    <string name="menu_rv_contacto_editar">Editar</string>
+    <string name="menu_rv_contacto_eliminar">Eliminar</string>
+
+</resources>

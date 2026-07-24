@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_rv_ayuda"
+        android:title="@string/menu_rv_ayuda"/>
+    <item
+        android:id="@+id/menu_rv_acerca_de"
+        android:title="@string/menu_rv_acerca_de"/>
+    <item
+        android:id="@+id/menu_rv_cerrar_sesion"
+        android:title="@string/menu_rv_cerrar_sesion"/>
+</menu>
