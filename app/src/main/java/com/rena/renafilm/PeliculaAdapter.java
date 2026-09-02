@@ -32,7 +32,7 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.MiView
     public MiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // EXAMEN: Cambiar "bloque4_item_fila" por el nombre de tu XML de la fila
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.bloque4_item_pelicula, parent, false);
+                .inflate(R.layout.item_pelicula, parent, false);
         return new MiViewHolder(view);
     }
     // PASO 2: ENLAZAR LOS DATOS (Pintar la información en la fila)

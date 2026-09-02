@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 //import com.example.practicas_aisladas_pmdm.bloque4_RecyclerView.Bloque4Adapter;
@@ -27,20 +27,19 @@ public class CategoriaListaActivityTema4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         //EMPIEZA EL RECYCLERVIEW
-        setContentView(R.layout.activity_plataforma_lista);
+        setContentView(R.layout.activity_categoria_lista);
         //BINDING
         // 1. Enganchar el RecyclerView del XML
         // EXAMEN: ID de tu RecyclerView
         RecyclerView recyclerView = findViewById(R.id.rvMiListaPlataformas);
-        // 2. Decirle cómo se va a mostrar (Lista vertical clásica)
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         // 3. Crear los datos falsos estáticos para probar la mecánica pura
         List<Categoria> categorias = new ArrayList<>();
-        categorias.add(new Categoria("Películas Populares", R.drawable.netflix_icon, "MOVIE_POPULAR"));
-        categorias.add(new Categoria("Series Populares", R.drawable.hbo_icon, "TV_POPULAR"));
-        categorias.add(new Categoria("Películas Mejor Valoradas", R.drawable.amazon_icon, "MOVIE_TOP_RATED"));
-//TODO  categorias.add(new Categoria("Películas Favoritas", R.drawable.amazon_icon, ""));
-//TODO  categorias.add(new Categoria("Series Favoritas", R.drawable.amazon_icon, ""));
+        categorias.add(new Categoria("Películas Populares", R.drawable.ic_corona, "MOVIE_POPULAR",R.drawable.peliculas_cine_favoritas));
+        categorias.add(new Categoria("Series Populares", R.drawable.ic_popular, "TV_POPULAR", R.drawable.series_tv));
+        categorias.add(new Categoria("Películas Mejor Valoradas", R.drawable.ic_corona, "MOVIE_TOP_RATED", R.drawable.peliculas_mvp));
+        categorias.add(new Categoria("Películas Favoritas", R.drawable.ic_cine, "", R.drawable.peliculas_cine_favoritas));
+        categorias.add(new Categoria("Series Favoritas", R.drawable.ic_tv, "", R.drawable.series_tv_favoritas));
         // 4. Crear el operario (Adaptador) y entregarle los datos
         CategoriaAdapter miAdaptador = new CategoriaAdapter(categorias);//Importante que miAdaptador lo creemos del tipo de la clase en este caso PlataformaAdapter
         // 5. Unir el operario al RecyclerView para que empiece a pintar

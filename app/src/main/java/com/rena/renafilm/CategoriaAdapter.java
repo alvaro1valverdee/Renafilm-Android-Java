@@ -21,7 +21,7 @@ public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.MiVi
     public MiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // EXAMEN: Cambiar "bloque4_item_fila" por el nombre de tu XML de la fila
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.bloque4_item_plataforma, parent, false);
+                .inflate(R.layout.item_categoria, parent, false);
         return new MiViewHolder(view);
     }
     // PASO 2: ENLAZAR LOS DATOS (Pintar la información en la fila)
@@ -31,6 +31,7 @@ public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.MiVi
 
         // EXAMEN: Usar el ID que le pusiste a tu TextView dentro del XML de la fila
         holder.imagenFila.setImageResource(categoriaActual.getImagenResId());
+        holder.imagenFondo.setImageResource(categoriaActual.getFondoResId());
         holder.tvFilaTexto.setText(categoriaActual.getNombre());
 
         //Si pìde que al pinchar en una plataforma te lleve a otra activity con una lista de peliculas
@@ -53,11 +54,13 @@ public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.MiVi
     // EL CONTENEDOR (ViewHolder): Busca y guarda los IDs visuales de la fila
     public static class MiViewHolder extends RecyclerView.ViewHolder {
         ImageView imagenFila;
+        ImageView imagenFondo;
         TextView tvFilaTexto;
         public MiViewHolder(@NonNull View itemView) {
             super(itemView);
             // EXAMEN: ID del TextView dentro de tu archivo bloque4_item_fila.xml
             imagenFila = itemView.findViewById(R.id.imagenFila);
+            imagenFondo = itemView.findViewById(R.id.imagenFondoDinamico);
             tvFilaTexto = itemView.findViewById(R.id.tvFilaTexto);
         }
     }
