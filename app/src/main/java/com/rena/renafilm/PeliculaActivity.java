@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.rena.renafilm.R;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
@@ -43,14 +45,16 @@ public class PeliculaActivity extends AppCompatActivity {
         String peliculaNombre = getIntent().getStringExtra("PELICULA_TITULO");
         // 🚨 OJO EXAMEN: Los tipos primitivos (int, float, boolean) requieren un valor por defecto
         // por si la clave no se encuentra o llega vacía.
-        int peliculaImagen = getIntent().getIntExtra("PELICULA_IMAGEN", 0);
-        float peliculaPuntuacion = getIntent().getFloatExtra("PELICULA_PUNTUACION", 0.0f);
+        String peliculaImagen = getIntent().getStringExtra("PELICULA_IMAGEN");
+        float peliculaPuntuacion = (float) getIntent().getDoubleExtra("PELICULA_PUNTUACION", 0.0f);
         String peliculaDescripcion = getIntent().getStringExtra("PELICULA_DESCRIPCION");
         // 3. Pintamos los datos en la pantalla si no son nulos
         if (peliculaNombre != null) {
             tvDetalleTitulo.setText(peliculaNombre);
-            ivDetallePoster.setImageResource(peliculaImagen);
-            rbDetallePelicula.setRating(peliculaPuntuacion);
+            Picasso.get()
+                    .load("https://image.tmdb.org/t/p/w500" + peliculaImagen)
+                    .into(ivDetallePoster); //Carga de imagen con Picasso
+            rbDetallePelicula.setRating(peliculaPuntuacion/2);
             descripcionPelicula.setText(peliculaDescripcion);
         }
 

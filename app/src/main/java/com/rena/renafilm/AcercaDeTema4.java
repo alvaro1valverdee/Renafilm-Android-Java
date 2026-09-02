@@ -11,8 +11,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.rena.renafilm.R;
-
 public class AcercaDeTema4 extends AppCompatActivity {
 
     @Override
@@ -31,14 +29,14 @@ public class AcercaDeTema4 extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);  // Activa el comportamiento de botón
             // Al poner el listener directo en la navegación de la toolbar:
             toolbar.setNavigationOnClickListener(v -> {
-                Intent intent = new Intent(AcercaDeTema4.this, PlataformaListaActivityTema4.class);
+                Intent intent = new Intent(AcercaDeTema4.this, CategoriaListaActivityTema4.class);
                 startActivity(intent);
                 finish();
             });
         }//FIN TOOLBAR
 
         btnAcercaDe.setOnClickListener(v -> {
-            Intent intent = new Intent(AcercaDeTema4.this, PlataformaListaActivityTema4.class);
+            Intent intent = new Intent(AcercaDeTema4.this, CategoriaListaActivityTema4.class);
             startActivity(intent);
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

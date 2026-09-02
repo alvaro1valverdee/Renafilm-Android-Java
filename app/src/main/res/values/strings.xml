@@ -26,11 +26,11 @@
     <string name="cursoAcercaDe" translatable="false">2025-2026</string>
     <string name="btnAcercaDe">Atras</string>
     <string name="texto_ayuda_largo"><b>GUÍA DE AYUDA Y SOPORTE TÉCNICO - STREAMIFY</b>\n\n
-        Bienvenido a la sección de asistencia al usuario de Streamify (Renafilm). Esta aplicación ha sido diseñada como parte del módulo práctico de Programación Multimedia y Dispositivos Móviles (PMDM) para ofrecer una experiencia fluida en la gestión y consulta de catálogos de plataformas de streaming de vídeo bajo demanda.\n\n
+        Bienvenido a la sección de asistencia al usuario de Streamify (Renafilm). Esta aplicación ha sido diseñada como parte del módulo práctico de Programación Multimedia y Dispositivos Móviles (PMDM) para ofrecer una experiencia fluida en la gestión y consulta de catálogos de categorias de streaming de vídeo bajo demanda.\n\n
 
         <b>1. NAVEGACIÓN PRINCIPAL</b>\n
         • <b>Pantalla de Inicio (Login):</b> Para acceder al catálogo, debe introducir sus credenciales. Si es la primera vez que inicia la aplicación, el sistema cuenta con un usuario maestro preconfigurado (admin / 1234). También puede acceder a la pantalla de registro para dar de alta nuevas credenciales locales.\n
-        • <b>Listado de Plataformas:</b> Una vez logueado, visualizará un RecyclerView con las principales plataformas del mercado (Netflix, HBO Max, Disney+, Amazon Prime, DAZN). Al pulsar sobre cualquiera de ellas, la aplicación filtrará automáticamente el contenido.\n
+        • <b>Listado de Plataformas:</b> Una vez logueado, visualizará un RecyclerView con las principales categorias del mercado (Netflix, HBO Max, Disney+, Amazon Prime, DAZN). Al pulsar sobre cualquiera de ellas, la aplicación filtrará automáticamente el contenido.\n
         • <b>Mosaico de Películas (Grid):</b> Dentro de cada plataforma, las películas y series se muestran en una cuadrícula de 3 columnas con sus respectivas carátulas, títulos y valoraciones de usuarios.\n\n
 
         <b>2. PREGUNTAS FRECUENTES (FAQ)</b>\n

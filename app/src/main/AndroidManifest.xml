@@ -30,7 +30,7 @@
             android:name=".PeliculasActivity"
             android:exported="false" />
         <activity
-            android:name=".PlataformaListaActivityTema4"
+            android:name=".CategoriaListaActivityTema4"
             android:exported="false" />
         <activity
             android:name=".MainActivityTema4"

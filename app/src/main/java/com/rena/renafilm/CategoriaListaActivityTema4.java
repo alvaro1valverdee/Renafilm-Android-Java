@@ -5,10 +5,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
@@ -17,13 +15,12 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rena.renafilm.R;
 //import com.example.practicas_aisladas_pmdm.bloque4_RecyclerView.Bloque4Adapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlataformaListaActivityTema4 extends AppCompatActivity {
+public class CategoriaListaActivityTema4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +35,14 @@ public class PlataformaListaActivityTema4 extends AppCompatActivity {
         // 2. Decirle cómo se va a mostrar (Lista vertical clásica)
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // 3. Crear los datos falsos estáticos para probar la mecánica pura
-        List<Plataforma> plataformas = new ArrayList<>();
-        plataformas.add(new Plataforma("Netflix", R.drawable.netflix_icon));
-        plataformas.add(new Plataforma("HBO", R.drawable.hbo_icon));
-        plataformas.add(new Plataforma("Disney+", R.drawable.disney_plus_icon));
-        plataformas.add(new Plataforma("Amazon prime", R.drawable.amazon_icon));
-        plataformas.add(new Plataforma("DAZN", R.drawable.dazn_icon));
+        List<Categoria> categorias = new ArrayList<>();
+        categorias.add(new Categoria("Películas Populares", R.drawable.netflix_icon, "MOVIE_POPULAR"));
+        categorias.add(new Categoria("Series Populares", R.drawable.hbo_icon, "TV_POPULAR"));
+        categorias.add(new Categoria("Películas Mejor Valoradas", R.drawable.amazon_icon, "MOVIE_TOP_RATED"));
+//TODO  categorias.add(new Categoria("Películas Favoritas", R.drawable.amazon_icon, ""));
+//TODO  categorias.add(new Categoria("Series Favoritas", R.drawable.amazon_icon, ""));
         // 4. Crear el operario (Adaptador) y entregarle los datos
-        PlataformaAdapter miAdaptador = new PlataformaAdapter(plataformas);//Importante que miAdaptador lo creemos del tipo de la clase en este caso PlataformaAdapter
+        CategoriaAdapter miAdaptador = new CategoriaAdapter(categorias);//Importante que miAdaptador lo creemos del tipo de la clase en este caso PlataformaAdapter
         // 5. Unir el operario al RecyclerView para que empiece a pintar
         recyclerView.setAdapter(miAdaptador);
 
@@ -82,12 +79,12 @@ public class PlataformaListaActivityTema4 extends AppCompatActivity {
         int id = item.getItemId();
         // EXAMEN: Usamos if-else porque las últimas versiones de Android Studio dan problemas con switch-case en IDs
         if (id == R.id.menu_rv_ayuda) {
-            Intent intent = new Intent(PlataformaListaActivityTema4.this, AyudaActivity.class);
+            Intent intent = new Intent(CategoriaListaActivityTema4.this, AyudaActivity.class);
             startActivity(intent);
             finish();
             return true;
         } else if (id == R.id.menu_rv_acerca_de) {
-            Intent intent = new Intent(PlataformaListaActivityTema4.this, AcercaDeTema4.class);
+            Intent intent = new Intent(CategoriaListaActivityTema4.this, AcercaDeTema4.class);
             startActivity(intent);
             finish();
             return true;
@@ -98,7 +95,7 @@ public class PlataformaListaActivityTema4 extends AppCompatActivity {
             editor.putBoolean("sesion_activa", false);
             editor.apply(); // Guarda el cambio de forma segura
             // Volvemos al Login
-            Intent intent = new Intent(PlataformaListaActivityTema4.this, LoginActivityTema4.class);
+            Intent intent = new Intent(CategoriaListaActivityTema4.this, LoginActivityTema4.class);
             startActivity(intent);
             finish();
             return true;

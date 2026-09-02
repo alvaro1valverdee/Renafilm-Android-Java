@@ -11,7 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rena.renafilm.R;
+import com.rena.renafilm.modelo.Pelicula;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -20,6 +21,10 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.MiView
     // CONSTRUCTOR: Por aquí recibe la lista de datos desde la Activity
     public PeliculaAdapter(List<Pelicula> peliculas) {
         this.peliculas = peliculas;
+    }
+    public void actualizarPeliculas(List<Pelicula> nuevasPeliculas) {
+        peliculas = nuevasPeliculas;
+        notifyDataSetChanged();
     }
     // PASO 1: INFLAR EL MOLDE (Crear la parte visual de una fila nueva)
     @NonNull
@@ -35,20 +40,21 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.MiView
     public void onBindViewHolder(@NonNull MiViewHolder holder, int position) {
         Pelicula peliculaActual = peliculas.get(position);
 
-        // EXAMEN: Usar el ID que le pusiste a tu TextView dentro del XML de la fila
-        holder.ivPoster.setImageResource(peliculaActual.getImagenResId());
-        holder.tvTituloPelicula.setText(peliculaActual.getNombre());
-        holder.puntuacionPelicula.setRating(peliculaActual.getPuntuacion());
+        Picasso.get()
+                .load("https://image.tmdb.org/t/p/w500" + peliculaActual.getPosterPath())
+                .into(holder.ivPoster); //Carga de imagen con Picasso
+        holder.tvTituloPelicula.setText(peliculaActual.getTitle());
+        holder.puntuacionPelicula.setRating((float) (peliculaActual.getVoteAverage()/2));
         // ⚠️ DETECTOR DE CLIC EN LA FILA
         holder.itemView.setOnClickListener(v -> {
             // Creamos el Intent hacia la Activity común que muestra cada pelicula
             Intent intent = new Intent(v.getContext(), PeliculaActivity.class);
 
             // Pasamos los atributos de la pelicula como "pasaporte"
-            intent.putExtra("PELICULA_TITULO", peliculaActual.getNombre());
-            intent.putExtra("PELICULA_IMAGEN", peliculaActual.getImagenResId());
-            intent.putExtra("PELICULA_PUNTUACION", peliculaActual.getPuntuacion());
-            intent.putExtra("PELICULA_DESCRIPCION", peliculaActual.getDescripcionPelicula());
+            intent.putExtra("PELICULA_TITULO", peliculaActual.getTitle());
+            intent.putExtra("PELICULA_IMAGEN", peliculaActual.getPosterPath());
+            intent.putExtra("PELICULA_PUNTUACION", peliculaActual.getVoteAverage());
+            intent.putExtra("PELICULA_DESCRIPCION", peliculaActual.getOverview());
 
             v.getContext().startActivity(intent);
         });

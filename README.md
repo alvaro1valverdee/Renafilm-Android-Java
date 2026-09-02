@@ -1,6 +1,6 @@
 # 🎬 Renafilm (Streamify) - Catálogo VOD Nativo
 
-Aplicación móvil nativa para Android diseñada para la consulta y gestión de catálogos de plataformas de streaming (VOD). 
+Aplicación móvil nativa para Android diseñada para la consulta y gestión de catálogos de categorias de streaming (VOD). 
 
 Este proyecto es el resultado de las prácticas de Programación Multimedia y Dispositivos Móviles (PMDM). Actualmente funciona como un MVP (Producto Mínimo Viable) para demostrar el dominio en la creación de interfaces de usuario complejas y navegación en Android, utilizando un conjunto de datos simulados (Mock Data) a la espera de su integración con una API externa.
 
@@ -10,7 +10,7 @@ Este proyecto es el resultado de las prácticas de Programación Multimedia y Di
 * **Gestión de Sesión:** Uso de `SharedPreferences` para mantener el estado de la sesión del usuario (admin / 1234).
 * **Navegación Dinámica:** Implementación de menús superiores (Options Menu) para acceder a las secciones de Ayuda, Acerca de y Cierre de sesión.
 * **Listas y Cuadrículas:** Uso intensivo de `RecyclerView` y adaptadores personalizados para mostrar:
-  * Un listado lineal de plataformas (Netflix, HBO, Disney+, etc.).
+  * Un listado lineal de categorias (Netflix, HBO, Disney+, etc.).
   * Un mosaico en formato cuadrícula (Grid) de 3 columnas para las carátulas de las películas.
 * **Vistas de Detalle:** Navegación mediante `Intents` pasando parámetros para mostrar la información ampliada de cada película (sinopsis, valoración y póster).
 

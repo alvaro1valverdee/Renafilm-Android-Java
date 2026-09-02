@@ -15,7 +15,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.appcompat.widget.Toolbar; // ⚠️ ESTA ES LA CLAVE
 
-import com.rena.renafilm.R;
 
 public class LoginActivityTema4 extends AppCompatActivity {
 
@@ -61,7 +60,7 @@ public class LoginActivityTema4 extends AppCompatActivity {
         boolean yaLogueado = prefs.getBoolean("sesion_activa", false); // El 'false' es el valor por defecto
         if (yaLogueado) {
             // Si ya inició sesión, viajamos directo al catálogo de películas sin pasar por aquí
-            Intent intent = new Intent(LoginActivityTema4.this, PlataformaListaActivityTema4.class);
+            Intent intent = new Intent(LoginActivityTema4.this, CategoriaListaActivityTema4.class);
             startActivity(intent);
             finish(); // Cerramos el Login para que no pueda volver atrás al pulsar el botón físico
         }
@@ -90,7 +89,7 @@ public class LoginActivityTema4 extends AppCompatActivity {
                 Toast.makeText(LoginActivityTema4.this, "¡Bienvenido de nuevo!", Toast.LENGTH_SHORT).show();
 
                 // Saltamos a la pantalla del catálogo
-                Intent intent = new Intent(LoginActivityTema4.this, PlataformaListaActivityTema4.class);
+                Intent intent = new Intent(LoginActivityTema4.this, CategoriaListaActivityTema4.class);
                 startActivity(intent);
                 finish();
 

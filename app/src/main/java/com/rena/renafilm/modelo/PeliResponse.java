@@ -3,9 +3,9 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 public class PeliResponse {
     @SerializedName("results")
-    private List<Peli> results;
+    private List<Pelicula> results;
 
-    public List<Peli> getResults() {
+    public List<Pelicula> getResults() {
         return results;
     }
 }
