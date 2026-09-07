@@ -9,19 +9,22 @@ public interface TmdbApi {
     @GET("movie/popular")
     Call<PeliResponse> getPopularMovies(
             @Query("api_key") String apiKey,
-            @Query("language") String language // Para pedir que nos devuelva los datos en español
+            @Query("language") String language, // Para pedir que nos devuelva los datos en español
+            @Query("page") int page
     );
     // 2. Películas Mejor Valoradas
     @GET("movie/top_rated")
     Call<PeliResponse> getTopRatedMovies(
             @Query("api_key") String apiKey,
-            @Query("language") String language
+            @Query("language") String language,
+            @Query("page") int page
     );
 
     // 3. Series Populares
     @GET("tv/popular")
     Call<PeliResponse> getPopularTvShows(
             @Query("api_key") String apiKey,
-            @Query("language") String language
+            @Query("language") String language,
+            @Query("page") int page
     );
 }
