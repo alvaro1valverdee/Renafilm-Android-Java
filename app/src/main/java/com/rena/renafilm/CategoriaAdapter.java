@@ -42,6 +42,8 @@ public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.MiVi
 
             // Pasamos el nombre de la categoria como "pasaporte" ("Peliculas favoritas", "Series favoritas"...)
             intent.putExtra("CATEGORIA_SELECCIONADA", categoriaActual.getCodigoEndpoint());
+            // 📦 NUEVA CAJA: Mandamos también el nombre ("Películas Populares", etc.)
+            intent.putExtra("TITULO_CATEGORIA", categoriaActual.getNombre());
 
             v.getContext().startActivity(intent);
         });

@@ -28,12 +28,19 @@ public class PeliculasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_peliculas); // Tu XML contenedor (RecyclerView + ProgressBar)
+        // 1. Recorremos el Intent para saber qué categoria ha pulsado el usuario
+        String categoria = getIntent().getStringExtra("CATEGORIA_SELECCIONADA");
+        // 2. Recogemos el nombre que nos manda el Adapter
+        String tituloCategoria = getIntent().getStringExtra("TITULO_CATEGORIA");
+        String apiKey = "83a8fe0de40d5d82e94bbeb24301f2da"; // Sustituye esto por tu API Key real de TMDB
+        String idioma = "es-ES"; // Para que nos traiga los títulos y sinopsis en español
         //TOOLBAR NATIVA
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
+        if (getSupportActionBar() != null && tituloCategoria != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);  // Muestra la flecha de atrás
             getSupportActionBar().setDisplayShowHomeEnabled(true);  // Activa el comportamiento de botón
+            getSupportActionBar().setTitle(tituloCategoria);
             // Al poner el listener directo en la navegación de la toolbar:
             toolbar.setNavigationOnClickListener(v -> {
                 finish(); // Cierra la pantalla al pulsar la flecha
@@ -41,11 +48,6 @@ public class PeliculasActivity extends AppCompatActivity {
         }//FIN TOOLBAR
         //PROGRESS BAR
         ProgressBar progressBar = findViewById(R.id.pbPeliculas);
-        // 1. Recorremos el Intent para saber qué categoria ha pulsado el usuario
-        String categoria = getIntent().getStringExtra("CATEGORIA_SELECCIONADA");
-        String apiKey = "83a8fe0de40d5d82e94bbeb24301f2da"; // Sustituye esto por tu API Key real de TMDB
-        String idioma = "es-ES"; // Para que nos traiga los títulos y sinopsis en español
-
         // Vinculamos el RecyclerView común
         RecyclerView rv = findViewById(R.id.rvPeliculas);
         rv.setLayoutManager(new GridLayoutManager(this, 3));//Indicamos que sea en grid y 3 por fila
