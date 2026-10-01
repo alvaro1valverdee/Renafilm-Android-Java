@@ -33,8 +33,6 @@ Al tratarse de un proyecto vivo, las fases de desarrollo se organizan de la sigu
 
 ## 📸 Capturas de Pantalla
 
-## 📸 Capturas de Pantalla
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/489fe4d6-6b17-4784-9e8d-d1fa8d4ca782" alt="Bienvenida" height="350" />
   <img src="https://github.com/user-attachments/assets/1eca5ccc-8604-4844-b862-7e52a8a4c68d" alt="Login" height="350" />
